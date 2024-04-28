@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px; /* Set the width of the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    position: fixed; /* Fixed position */
+    top: 0; /* Top position */
+    left: 0; /* Left position */
+    background-color: #2c3e50; /* Background color */
+    color: #ecf0f1; /* Text color */
+    padding-top: 20px; /* Padding at the top */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block; /* Make links block-level */
+    padding: 10px 20px; /* Padding around links */
+    color: inherit; /* Inherit color from sidebar */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+/* Sidebar links hover effect */
+.sidebar a:hover {
+    background-color: #34495e; /* Change background color on hover */
+}
+
+/* Active link styling */
+.sidebar a.active {
+    background-color: #1abc9c; /* Highlight active link */
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 250px; /* Set margin to accommodate sidebar */
+    padding: 20px; /* Padding for main content */
+}

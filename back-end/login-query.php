@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 include '../database/db-connection.php'; 
 
 if (!$mysqli) {
@@ -13,6 +13,10 @@ $sql = "SELECT username, password FROM users WHERE username='$username' AND pass
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0){
+    
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
+
     header("Location: ../user/home.php");
 
 }
