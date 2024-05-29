@@ -24,7 +24,7 @@ function getFriendships($username) {
         }
     }
 
-    //i will use this to select username of user1's friend
+    //i will use this to select username of user1's friend from users table
 
    
     $mysqli->close();
