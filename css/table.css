@@ -3,12 +3,13 @@ table, th, td {
     position: relative;
     margin: auto;
     text-align: center;
+    width: auto;
   }
 
 
 
 td:hover {
-    background-color: green;
+    background-color: lightgreen;
     animation-duration: 4s;
 
 }

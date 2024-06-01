@@ -33,6 +33,8 @@ $username = $_SESSION['username'];
         foreach ($friendships as $friendship) {
             echo "<tr>";
             echo "<td>" . htmlspecialchars($friendship['username']) . "</td>";
+            echo "<td>" . htmlspecialchars($friendship['status']) . "</td>";
+            echo "<td><button>Unfriend</button></td>";
             echo "</tr>";
         }
 
