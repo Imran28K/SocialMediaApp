@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friend List</title>
+    <link rel="stylesheet" type="text/css" href="../css/table.css">
 </head>
 <body>
 
@@ -23,9 +24,11 @@ $username = $_SESSION['username'];
     $friendships = getFriendships($username); 
     if (!empty($friendships)) {
         echo "<table>";
-        echo "<tr>
+        echo "<thead><tr>
                 <th>Username</th>
-              </tr>";
+                <th>Status</th>
+                <th>Action</th>
+              </tr></thead><tbody>";
 
         foreach ($friendships as $friendship) {
             echo "<tr>";
@@ -33,7 +36,7 @@ $username = $_SESSION['username'];
             echo "</tr>";
         }
 
-        echo "</table>";
+        echo "</tbody></table>";
     } else {
         echo "<p>No friends found.</p>";
     }

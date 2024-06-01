@@ -1,0 +1,15 @@
+table, th, td {
+    border: 1px solid;
+    position: relative;
+    margin: auto;
+    text-align: center;
+  }
+
+
+
+td:hover {
+    background-color: green;
+    animation-duration: 4s;
+
+}
+
