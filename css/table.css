@@ -1,16 +1,41 @@
-table, th, td {
-    border: 1px solid;
-    position: relative;
-    margin: auto;
-    text-align: center;
-    width: auto;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-
-
-td:hover {
-    background-color: lightgreen;
-    animation-duration: 4s;
+th, td {
+  text-align: left;
+  padding: 16px;
+  border: 1px solid #ddd;
 
 }
 
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block; /* Make elements block-level for better stacking */
+  }
+
+  th, td {
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+
+  th {
+    display: none; /* Hide table headers */
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%; /* Adjust padding to accommodate pseudo-element */
+    text-align: right; /* Align text to the right */
+  }
+
+  td::before {
+    content: attr(data-label); /* Use data-label attribute for responsive labels */
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 16px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
