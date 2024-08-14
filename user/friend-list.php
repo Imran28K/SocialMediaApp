@@ -44,6 +44,6 @@ $username = $_SESSION['username'];
     }
     ?>
 </div>
-
+<script src="../js/navbar.js"></script>
 </body>
 </html>
